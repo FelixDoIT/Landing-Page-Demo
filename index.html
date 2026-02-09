@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCraft – Xây dựng Website & App chất lượng cao</title>
+    <meta name="description" content="WebCraft – Team phát triển Website & App chuyên nghiệp, tối ưu chi phí vận hành.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">W</span>
+                <span class="logo-text">WebCraft</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Trang chủ</a></li>
+                <li><a href="#about" class="nav-link">Giới thiệu</a></li>
+                <li><a href="#services" class="nav-link">Dịch vụ</a></li>
+                <li><a href="#projects" class="nav-link">Dự án</a></li>
+                <li><a href="#timeline" class="nav-link">Hành trình</a></li>
+                <li><a href="#testimonials" class="nav-link">Đánh giá</a></li>
+                <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Chuyển đổi theme">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge anim">
+                    <span class="badge-dot"></span> Sẵn sàng cho dự án mới
+                </div>
+                <h1 class="hero-title anim">
+                    Xây dựng <span class="gradient">Website</span> &amp; <span class="gradient">App</span> chất lượng cao, tối ưu chi phí.
+                </h1>
+                <p class="hero-desc anim">
+                    Chúng tôi là <strong>WebCraft</strong> – team gồm 2 developer trẻ, mang đến giải pháp công nghệ trọn gói: từ tư vấn, thiết kế đến lập trình, với chi phí hợp lý và cam kết đồng hành dài hạn.
+                </p>
+                <div class="hero-cta anim">
+                    <a href="#projects" class="btn btn-primary">Xem dự án
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">Liên hệ ngay</a>
+                </div>
+                <div class="hero-stats anim">
+                    <div class="stat"><span class="stat-icon">🚀</span><div><strong>Trọn gói</strong><span>Web & Mobile App</span></div></div>
+                    <div class="stat"><span class="stat-icon">💰</span><div><strong>Chi phí tối ưu</strong><span>Chất lượng cam kết</span></div></div>
+                    <div class="stat"><span class="stat-icon">🤝</span><div><strong>Hỗ trợ lâu dài</strong><span>Không bỏ dở dự án</span></div></div>
+                </div>
+            </div>
+            <div class="hero-visual anim">
+                <div class="hero-img-wrap">
+                    <div class="hero-placeholder">
+                        <span class="ph-icon">👨‍💻👨‍💻</span>
+                        <span class="ph-text">Ảnh team</span>
+                    </div>
+                    <div class="hero-img-decor"></div>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></svg>
+        </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header anim">
+                <span class="section-tag">Về chúng tôi</span>
+                <h2 class="section-title">Tại sao nên chọn WebCraft?</h2>
+                <p class="section-desc">Team gồm 2 thành viên, tập trung xây giải pháp bền vững, dễ mở rộng – không phải sản phẩm "mì ăn liền" làm cho xong.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card anim">
+                    <div class="card-icon">⚡</div>
+                    <h3>Chi phí hợp lý – Chất lượng cao</h3>
+                    <p>Bạn không cần ngân sách "khủng" để có sản phẩm công nghệ xịn. Chúng tôi tối ưu quy trình để mang lại mức giá cạnh tranh nhất mà vẫn đảm bảo hiệu năng và thẩm mỹ.</p>
+                </div>
+                <div class="about-card anim">
+                    <div class="card-icon">📱</div>
+                    <h3>Đa nền tảng: Web & App</h3>
+                    <p>Đáp ứng mọi nhu cầu số hoá. Từ Website giới thiệu, Landing Page bán hàng đến Mobile App (iOS/Android) mượt mà.</p>
+                </div>
+                <div class="about-card anim">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Cam kết hỗ trợ trọn đời</h3>
+                    <p>Sản phẩm bàn giao là tâm huyết của chúng tôi. Cam kết bảo hành, bảo trì và hỗ trợ bạn trong suốt quá trình vận hành.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section section-alt" id="services">
+        <div class="container">
+            <div class="section-header anim">
+                <span class="section-tag">Dịch vụ</span>
+                <h2 class="section-title">Giải pháp công nghệ toàn diện</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card anim">
+                    <div class="service-header">
+                        <div class="service-icon">🌐</div>
+                        <h3>Thiết kế Website</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li>Website Doanh nghiệp (Corporate)</li>
+                        <li>Landing Page bán hàng (High convert)</li>
+                        <li>Trang thương mại điện tử (E-commerce)</li>
+                        <li>Website theo yêu cầu (Custom)</li>
+                        <li>Đồ án, bài tập lớn cho sinh viên</li>
+                    </ul>
+                </div>
+                <div class="service-card anim">
+                    <div class="service-header">
+                        <div class="service-icon">📲</div>
+                        <h3>Lập trình Mobile App</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li>App bán hàng, đặt lịch (iOS/Android)</li>
+                        <li>Ứng dụng quản lý nội bộ</li>
+                        <li>Tích hợp thông báo đẩy (Push Notification)</li>
+                    </ul>
+                </div>
+                <div class="service-card anim">
+                    <div class="service-header">
+                        <div class="service-icon">🤖</div>
+                        <h3>Giải pháp AI & Automation</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li>Chatbot tư vấn tự động 24/7</li>
+                        <li>Tích hợp ChatGPT / OpenAI</li>
+                        <li>Tool tự động hoá quy trình (RPA)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header anim">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Các Dự Án</h2>
+                <p class="section-desc">Một số dự án tiêu biểu thể hiện tư duy giải pháp và năng lực kỹ thuật.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card anim">
+                    <div class="project-img"><div class="project-ph"><span>🛒</span></div><div class="project-overlay"><a href="#" class="btn btn-sm">Xem chi tiết</a></div></div>
+                    <div class="project-info">
+                        <div class="project-tags"><span class="tag">E-Commerce</span><span class="tag">Node.js</span></div>
+                        <h3>Dự án E-Commerce</h3>
+                        <p>Website thương mại điện tử với đầy đủ tính năng giỏ hàng, thanh toán, quản lý đơn hàng.</p>
+                    </div>
+                </div>
+                <div class="project-card anim">
+                    <div class="project-img"><div class="project-ph"><span>🤖</span></div><div class="project-overlay"><a href="#" class="btn btn-sm">Xem chi tiết</a></div></div>
+                    <div class="project-info">
+                        <div class="project-tags"><span class="tag">AI</span><span class="tag">OpenAI</span></div>
+                        <h3>AI Chatbot Platform</h3>
+                        <p>Nền tảng chatbot tư vấn tự động tích hợp ChatGPT, hỗ trợ doanh nghiệp 24/7.</p>
+                    </div>
+                </div>
+                <div class="project-card anim">
+                    <div class="project-img"><div class="project-ph"><span>📱</span></div><div class="project-overlay"><a href="#" class="btn btn-sm">Xem chi tiết</a></div></div>
+                    <div class="project-info">
+                        <div class="project-tags"><span class="tag">Mobile</span><span class="tag">React Native</span></div>
+                        <h3>Mobile App Đặt lịch</h3>
+                        <p>Ứng dụng di động đặt lịch hẹn thông minh cho salon, spa với push notification.</p>
+                    </div>
+                </div>
+                <div class="project-card anim">
+                    <div class="project-img"><div class="project-ph"><span>🏢</span></div><div class="project-overlay"><a href="#" class="btn btn-sm">Xem chi tiết</a></div></div>
+                    <div class="project-info">
+                        <div class="project-tags"><span class="tag">Corporate</span><span class="tag">SEO</span></div>
+                        <h3>Website Doanh nghiệp</h3>
+                        <p>Website giới thiệu chuyên nghiệp, chuẩn SEO, tốc độ tải nhanh, responsive hoàn hảo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="section section-alt" id="timeline">
+        <div class="container">
+            <div class="section-header anim">
+                <span class="section-tag">Hành trình</span>
+                <h2 class="section-title">Con đường phát triển</h2>
+                <p class="section-desc">Mỗi bước đi đều là bài học, mỗi dự án đều là trải nghiệm quý giá.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item anim">
+                    <div class="timeline-marker"><div class="timeline-dot"></div></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">Khởi đầu</span>
+                        <h3>Đam mê dẫn lối</h3>
+                        <p>Bắt đầu hành trình với niềm đam mê công nghệ. Tự học lập trình, xây dựng những dự án đầu tiên với sự háo hức và nhiệt huyết.</p>
+                    </div>
+                </div>
+                <div class="timeline-item anim">
+                    <div class="timeline-marker"><div class="timeline-dot"></div></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">Thử thách</span>
+                        <h3>Vượt qua khó khăn</h3>
+                        <p>Đối mặt với những thử thách. Học từ sai lầm, rèn luyện kỹ năng, xây dựng tư duy giải quyết vấn đề một cách hệ thống.</p>
+                    </div>
+                </div>
+                <div class="timeline-item anim">
+                    <div class="timeline-marker"><div class="timeline-dot"></div></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">Hiện tại</span>
+                        <h3>Phục vụ khách hàng</h3>
+                        <p>Mang kinh nghiệm và sự thấu hiểu để phục vụ khách hàng. Không chỉ viết code – chúng tôi giúp bạn hiện thực hóa ý tưởng.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="section-header anim">
+                <span class="section-tag">Đánh giá</span>
+                <h2 class="section-title">Chuyện người thật, việc thật</h2>
+                <p class="section-desc">Niềm tin được xây dựng từ kết quả thực tế.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card anim">
+                    <div class="stars">★★★★★</div>
+                    <p>"Ưng nhất là khoản support. Web bàn giao xong 3 tháng rồi, mình nhắn nhờ sửa lại cái banner lúc 10h đêm mà vẫn rep và xử lý luôn trong đêm. Trách nhiệm thực sự!"</p>
+                    <div class="author"><div class="avatar">A</div><div><strong>Anh Minh</strong><span>CEO, Startup Tech</span></div></div>
+                </div>
+                <div class="testimonial-card anim">
+                    <div class="stars">★★★★★</div>
+                    <p>"Chi phí rất hợp lý so với chất lượng nhận được. Code kỹ, logic chặt chẽ, không vẽ vời thêm tính năng để thu tiền. Rất đáng tin cậy."</p>
+                    <div class="author"><div class="avatar">H</div><div><strong>Huy Hoàng</strong><span>Project Manager</span></div></div>
+                </div>
+                <div class="testimonial-card anim">
+                    <div class="stars">★★★★★</div>
+                    <p>"Làm việc chuyên nghiệp, rõ ràng từng đầu mục. Web chạy nhanh, chuẩn SEO, mới chạy 2 tuần mà từ khóa đã bắt đầu lên top!"</p>
+                    <div class="author"><div class="avatar">L</div><div><strong>Chị Lan</strong><span>Founder, Thời trang</span></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <div class="section-header anim">
+                <span class="section-tag">Liên hệ</span>
+                <h2 class="section-title">Bạn cần Web/App trọn gói<br>với chi phí tốt nhất?</h2>
+                <p class="section-desc">Để lại thông tin, chúng tôi sẽ liên hệ tư vấn giải pháp tối ưu cho bạn ngay.</p>
+            </div>
+            <div class="contact-grid">
+                <form class="contact-form anim" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Họ và tên</label>
+                        <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Số điện thoại / Zalo</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="need">Nhu cầu của bạn</label>
+                        <select id="need" name="need" required>
+                            <option value="" disabled selected>Chọn nhu cầu</option>
+                            <option value="website">Thiết kế Website</option>
+                            <option value="app">Lập trình Mobile App</option>
+                            <option value="ai">Giải pháp AI & Automation</option>
+                            <option value="other">Khác</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Lời nhắn (Không bắt buộc)</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Mô tả thêm về dự án..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Nhận tư vấn ngay
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </button>
+                </form>
+                <div class="contact-info anim">
+                    <div class="contact-card">
+                        <h3>Liên hệ trực tiếp</h3>
+                        <a href="tel:0388402378" class="contact-link">
+                            <div class="cl-icon">📞</div>
+                            <div><strong>Điện thoại / Zalo</strong><span>0388 402 378</span></div>
+                        </a>
+                        <a href="mailto:nvdtuan@gmail.com" class="contact-link">
+                            <div class="cl-icon">✉️</div>
+                            <div><strong>Email</strong><span>nvdtuan@gmail.com</span></div>
+                        </a>
+                        <a href="https://www.facebook.com/nguyenvdtuan/" target="_blank" class="contact-link">
+                            <div class="cl-icon">📘</div>
+                            <div><strong>Facebook</strong><span>fb.com/nguyenvdtuan</span></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <a href="#" class="nav-logo"><span class="logo-icon">W</span><span class="logo-text">WebCraft</span></a>
+                <p>© 2025 WebCraft. All Rights Reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="tel:0388402378">0388 402 378</a>
+                <a href="mailto:nvdtuan@gmail.com">Email</a>
+                <a href="https://www.facebook.com/nguyenvdtuan/" target="_blank">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
