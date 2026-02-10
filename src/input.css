@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* ===== Theme tokens (Light/Dark) ===== */
+:root {
+  --bg: 255 255 255;
+  --fg: 12 12 12;
+  --muted: 110 110 110;
+  --card: 250 250 250;
+  --card-2: 244 244 245;
+  --border: 0 0 0;
+}
+
+.dark {
+  --bg: 0 0 0;
+  --fg: 255 255 255;
+  --muted: 170 170 170;
+  --card: 18 18 18;
+  --card-2: 10 10 10;
+  --border: 255 255 255;
+}
+
+/* Smooth theme transition */
+html, body {
+  transition: background-color .25s ease, color .25s ease;
+}
+
+/* Navbar active link */
+.nav-link.active {
+  background: rgba(var(--border), 0.08);
+  color: rgb(var(--fg));
+  border-radius: 12px;
+}
+
+/* ===== Scroll reveal animation ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  filter: blur(6px);
+  transition: opacity .7s ease, transform .7s ease, filter .7s ease;
+  will-change: opacity, transform, filter;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none;
+    transform: none;
+    filter: none;
+    opacity: 1;
+  }
+}
