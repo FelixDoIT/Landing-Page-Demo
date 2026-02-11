@@ -23,43 +23,74 @@
 
   <!-- Tailwind output -->
   <link rel="stylesheet" href="./src/output.css">
+
+  <style>
+    /* Critical: prevent layout shift before font loads */
+    body { font-family: Inter, system-ui, -apple-system, sans-serif; }
+  </style>
 </head>
 
-<body class="min-h-screen bg-[rgb(var(--bg))] text-[rgb(var(--fg))] antialiased [font-family:Inter,system-ui,sans-serif] transition-colors duration-300">
+<body class="min-h-screen bg-[rgb(var(--bg))] text-[rgb(var(--fg))] antialiased transition-colors duration-300">
 
   <!-- NAVBAR -->
   <nav id="navbar"
-    class="fixed inset-x-0 top-0 z-50 border-b border-[rgba(var(--border),0.12)] bg-[rgba(var(--bg),0.75)] backdrop-blur">
+    class="fixed inset-x-0 top-0 z-50 border-b border-[rgba(var(--border),0.08)] bg-[rgba(var(--bg),0.80)] backdrop-blur-xl">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
-      <a href="#hero" class="group inline-flex items-center gap-2">
-        <span class="grid h-9 w-9 place-items-center rounded-xl bg-[rgba(var(--border),0.06)] text-lg font-black ring-1 ring-[rgba(var(--border),0.10)]">
+      <a href="#hero" class="group inline-flex items-center gap-2.5">
+        <span class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-emerald-500 to-cyan-500 text-lg font-black text-white shadow-sm">
           W
         </span>
-        <span class="text-sm font-semibold tracking-wide md:text-base">WebCraft</span>
+        <span class="text-sm font-bold tracking-wide md:text-base">WebCraft</span>
       </a>
 
       <ul class="hidden items-center gap-1 md:flex">
-        <li><a href="#hero" class="nav-link inline-flex rounded-lg px-3 py-2 text-sm text-[rgba(var(--fg),0.75)] hover:bg-[rgba(var(--border),0.06)] hover:text-[rgb(var(--fg))] active">Trang chủ</a></li>
-        <li><a href="#about" class="nav-link inline-flex rounded-lg px-3 py-2 text-sm text-[rgba(var(--fg),0.75)] hover:bg-[rgba(var(--border),0.06)] hover:text-[rgb(var(--fg))]">Giới thiệu</a></li>
-        <li><a href="#services" class="nav-link inline-flex rounded-lg px-3 py-2 text-sm text-[rgba(var(--fg),0.75)] hover:bg-[rgba(var(--border),0.06)] hover:text-[rgb(var(--fg))]">Dịch vụ</a></li>
-        <li><a href="#projects" class="nav-link inline-flex rounded-lg px-3 py-2 text-sm text-[rgba(var(--fg),0.75)] hover:bg-[rgba(var(--border),0.06)] hover:text-[rgb(var(--fg))]">Dự án</a></li>
-        <li><a href="#timeline" class="nav-link inline-flex rounded-lg px-3 py-2 text-sm text-[rgba(var(--fg),0.75)] hover:bg-[rgba(var(--border),0.06)] hover:text-[rgb(var(--fg))]">Hành trình</a></li>
-        <li><a href="#testimonials" class="nav-link inline-flex rounded-lg px-3 py-2 text-sm text-[rgba(var(--fg),0.75)] hover:bg-[rgba(var(--border),0.06)] hover:text-[rgb(var(--fg))]">Đánh giá</a></li>
-        <li><a href="#contact" class="nav-link inline-flex rounded-lg px-3 py-2 text-sm text-[rgba(var(--fg),0.75)] hover:bg-[rgba(var(--border),0.06)] hover:text-[rgb(var(--fg))]">Liên hệ</a></li>
+        <li><a href="#hero" class="nav-link inline-flex rounded-lg px-3 py-2 text-sm text-[rgba(var(--fg),0.65)] hover:bg-[rgba(var(--accent),0.08)] hover:text-[rgb(var(--accent))] transition-colors active">Trang chủ</a></li>
+        <li><a href="#about" class="nav-link inline-flex rounded-lg px-3 py-2 text-sm text-[rgba(var(--fg),0.65)] hover:bg-[rgba(var(--accent),0.08)] hover:text-[rgb(var(--accent))] transition-colors">Giới thiệu</a></li>
+        <li><a href="#services" class="nav-link inline-flex rounded-lg px-3 py-2 text-sm text-[rgba(var(--fg),0.65)] hover:bg-[rgba(var(--accent),0.08)] hover:text-[rgb(var(--accent))] transition-colors">Dịch vụ</a></li>
+        <li><a href="#projects" class="nav-link inline-flex rounded-lg px-3 py-2 text-sm text-[rgba(var(--fg),0.65)] hover:bg-[rgba(var(--accent),0.08)] hover:text-[rgb(var(--accent))] transition-colors">Dự án</a></li>
+        <li><a href="#timeline" class="nav-link inline-flex rounded-lg px-3 py-2 text-sm text-[rgba(var(--fg),0.65)] hover:bg-[rgba(var(--accent),0.08)] hover:text-[rgb(var(--accent))] transition-colors">Hành trình</a></li>
+        <li><a href="#testimonials" class="nav-link inline-flex rounded-lg px-3 py-2 text-sm text-[rgba(var(--fg),0.65)] hover:bg-[rgba(var(--accent),0.08)] hover:text-[rgb(var(--accent))] transition-colors">Đánh giá</a></li>
+        <li><a href="#contact" class="nav-link inline-flex rounded-lg px-3 py-2 text-sm text-[rgba(var(--fg),0.65)] hover:bg-[rgba(var(--accent),0.08)] hover:text-[rgb(var(--accent))] transition-colors">Liên hệ</a></li>
       </ul>
 
-      <button id="themeToggle" aria-label="Chuyển đổi theme"
-        class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[rgba(var(--border),0.06)] ring-1 ring-[rgba(var(--border),0.12)] hover:bg-[rgba(var(--border),0.10)]">
-        <!-- Sun (show in dark) -->
-        <svg class="hidden dark:block" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="5"></circle>
-          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-        </svg>
-        <!-- Moon (show in light) -->
-        <svg class="block dark:hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-      </button>
+      <div class="flex items-center gap-2">
+        <!-- Theme toggle pill -->
+        <button id="themeToggle" aria-label="Chuyển đổi theme" class="theme-toggle">
+          <!-- Sun (show in light) -->
+          <svg class="block dark:hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <!-- Moon (show in dark) -->
+          <svg class="hidden dark:block" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span class="inline dark:hidden text-xs">Light</span>
+          <span class="hidden dark:inline text-xs">Dark</span>
+        </button>
+
+        <!-- Mobile menu button -->
+        <button id="mobileMenuBtn" aria-label="Menu" class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[rgba(var(--border),0.06)] ring-1 ring-[rgba(var(--border),0.10)] hover:bg-[rgba(var(--accent),0.10)] md:hidden transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="mobile-menu md:hidden border-t border-[rgba(var(--border),0.08)]">
+      <div class="mx-auto max-w-7xl px-4 py-3 space-y-1">
+        <a href="#hero" class="nav-link block rounded-lg px-3 py-2.5 text-sm text-[rgba(var(--fg),0.70)] hover:bg-[rgba(var(--accent),0.08)] hover:text-[rgb(var(--accent))] active">Trang chủ</a>
+        <a href="#about" class="nav-link block rounded-lg px-3 py-2.5 text-sm text-[rgba(var(--fg),0.70)] hover:bg-[rgba(var(--accent),0.08)] hover:text-[rgb(var(--accent))]">Giới thiệu</a>
+        <a href="#services" class="nav-link block rounded-lg px-3 py-2.5 text-sm text-[rgba(var(--fg),0.70)] hover:bg-[rgba(var(--accent),0.08)] hover:text-[rgb(var(--accent))]">Dịch vụ</a>
+        <a href="#projects" class="nav-link block rounded-lg px-3 py-2.5 text-sm text-[rgba(var(--fg),0.70)] hover:bg-[rgba(var(--accent),0.08)] hover:text-[rgb(var(--accent))]">Dự án</a>
+        <a href="#timeline" class="nav-link block rounded-lg px-3 py-2.5 text-sm text-[rgba(var(--fg),0.70)] hover:bg-[rgba(var(--accent),0.08)] hover:text-[rgb(var(--accent))]">Hành trình</a>
+        <a href="#testimonials" class="nav-link block rounded-lg px-3 py-2.5 text-sm text-[rgba(var(--fg),0.70)] hover:bg-[rgba(var(--accent),0.08)] hover:text-[rgb(var(--accent))]">Đánh giá</a>
+        <a href="#contact" class="nav-link block rounded-lg px-3 py-2.5 text-sm text-[rgba(var(--fg),0.70)] hover:bg-[rgba(var(--accent),0.08)] hover:text-[rgb(var(--accent))]">Liên hệ</a>
+      </div>
     </div>
   </nav>
 
@@ -72,14 +103,14 @@
 
     <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 pb-16 md:grid-cols-12 md:px-6 md:pb-24">
       <div class="md:col-span-7">
-        <div class="reveal inline-flex items-center gap-2 rounded-full bg-[rgba(var(--border),0.06)] px-3 py-1.5 text-xs text-[rgba(var(--fg),0.75)] ring-1 ring-[rgba(var(--border),0.10)]">
-          <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+        <div class="reveal inline-flex items-center gap-2 rounded-full bg-[rgba(var(--accent),0.10)] px-3.5 py-1.5 text-xs font-medium text-[rgb(var(--accent))] ring-1 ring-[rgba(var(--accent),0.20)]">
+          <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-[rgb(var(--accent))]"></span>
           Sẵn sàng cho dự án mới
         </div>
 
-        <h1 class="reveal mt-5 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
+        <h1 class="reveal mt-5 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl lg:text-6xl">
   Xây dựng
-  <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+  <span class="gradient-text">
     Website &amp; App
   </span>
   chất lượng cao, tối ưu chi phí.
@@ -93,31 +124,31 @@
 
         <div class="reveal mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
           <a href="#projects"
-            class="inline-flex items-center justify-center gap-2 rounded-xl bg-[rgb(var(--fg))] px-5 py-3 text-sm font-semibold text-[rgb(var(--bg))] hover:opacity-90">
+            class="btn-glow inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-[1.02] transition-all duration-300">
             Xem dự án
             <span aria-hidden="true">→</span>
           </a>
           <a href="#contact"
-            class="inline-flex items-center justify-center rounded-xl bg-[rgba(var(--border),0.06)] px-5 py-3 text-sm font-semibold text-[rgb(var(--fg))] ring-1 ring-[rgba(var(--border),0.12)] hover:bg-[rgba(var(--border),0.10)]">
+            class="inline-flex items-center justify-center rounded-xl bg-[rgba(var(--border),0.06)] px-6 py-3 text-sm font-semibold text-[rgb(var(--fg))] ring-1 ring-[rgba(var(--border),0.12)] hover:bg-[rgba(var(--accent),0.08)] hover:ring-[rgba(var(--accent),0.25)] hover:text-[rgb(var(--accent))] transition-all duration-300">
             Liên hệ ngay
           </a>
         </div>
 
         <div class="reveal mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3">
-          <div class="rounded-2xl bg-[rgb(var(--card))] p-4 ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
-            <div class="text-xl">🚀</div>
-            <div class="mt-2 text-sm font-semibold">Trọn gói</div>
-            <div class="text-xs text-[rgba(var(--fg),0.60)]">Web & Mobile App</div>
+          <div class="card-hover rounded-2xl bg-[rgb(var(--card))] p-4 ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
+            <div class="grid h-10 w-10 place-items-center rounded-xl bg-[rgba(var(--accent),0.10)] text-lg">🚀</div>
+            <div class="mt-3 text-sm font-semibold">Trọn gói</div>
+            <div class="text-xs text-[rgba(var(--fg),0.55)]">Web & Mobile App</div>
           </div>
-          <div class="rounded-2xl bg-[rgb(var(--card))] p-4 ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
-            <div class="text-xl">💰</div>
-            <div class="mt-2 text-sm font-semibold">Chi phí tối ưu</div>
-            <div class="text-xs text-[rgba(var(--fg),0.60)]">Chất lượng cam kết</div>
+          <div class="card-hover rounded-2xl bg-[rgb(var(--card))] p-4 ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
+            <div class="grid h-10 w-10 place-items-center rounded-xl bg-[rgba(var(--accent),0.10)] text-lg">💰</div>
+            <div class="mt-3 text-sm font-semibold">Chi phí tối ưu</div>
+            <div class="text-xs text-[rgba(var(--fg),0.55)]">Chất lượng cam kết</div>
           </div>
-          <div class="rounded-2xl bg-[rgb(var(--card))] p-4 ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
-            <div class="text-xl">🤝</div>
-            <div class="mt-2 text-sm font-semibold">Hỗ trợ lâu dài</div>
-            <div class="text-xs text-[rgba(var(--fg),0.60)]">Không bỏ dở dự án</div>
+          <div class="card-hover rounded-2xl bg-[rgb(var(--card))] p-4 ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
+            <div class="grid h-10 w-10 place-items-center rounded-xl bg-[rgba(var(--accent),0.10)] text-lg">🤝</div>
+            <div class="mt-3 text-sm font-semibold">Hỗ trợ lâu dài</div>
+            <div class="text-xs text-[rgba(var(--fg),0.55)]">Không bỏ dở dự án</div>
           </div>
         </div>
       </div>
@@ -165,26 +196,27 @@
   <section id="about" class="py-16 md:py-20">
     <div class="mx-auto max-w-7xl px-4 md:px-6">
       <div class="reveal max-w-2xl">
-        <div class="inline-flex rounded-full bg-[rgba(var(--border),0.06)] px-3 py-1.5 text-xs text-[rgba(var(--fg),0.70)] ring-1 ring-[rgba(var(--border),0.10)]">Về chúng tôi</div>
+        <div class="inline-flex rounded-full bg-[rgba(var(--accent),0.10)] px-3 py-1.5 text-xs font-medium text-[rgb(var(--accent))] ring-1 ring-[rgba(var(--accent),0.20)]">Về chúng tôi</div>
         <h2 class="mt-4 text-3xl font-bold tracking-tight md:text-4xl">Tại sao nên chọn WebCraft?</h2>
-        <p class="mt-3 text-[rgba(var(--fg),0.65)]">Tập trung giải pháp bền vững, dễ mở rộng — không làm cho xong.</p>
+        <div class="section-accent-line mt-3"></div>
+        <p class="mt-4 text-[rgba(var(--fg),0.65)]">Tập trung giải pháp bền vững, dễ mở rộng — không làm cho xong.</p>
       </div>
 
-      <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
-        <div class="reveal rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
-          <div class="text-2xl">⚡</div>
+      <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3 stagger">
+        <div class="reveal card-hover rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
+          <div class="grid h-12 w-12 place-items-center rounded-2xl bg-[rgba(var(--accent),0.10)] text-2xl">⚡</div>
           <h3 class="mt-4 text-lg font-semibold">Chi phí hợp lý – Chất lượng cao</h3>
-          <p class="mt-2 text-sm text-[rgba(var(--fg),0.65)]">Quy trình tối ưu để giá tốt nhưng vẫn đảm bảo hiệu năng & thẩm mỹ.</p>
+          <p class="mt-2 text-sm leading-relaxed text-[rgba(var(--fg),0.60)]">Quy trình tối ưu để giá tốt nhưng vẫn đảm bảo hiệu năng & thẩm mỹ.</p>
         </div>
-        <div class="reveal rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
-          <div class="text-2xl">📱</div>
+        <div class="reveal card-hover rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
+          <div class="grid h-12 w-12 place-items-center rounded-2xl bg-[rgba(var(--accent),0.10)] text-2xl">📱</div>
           <h3 class="mt-4 text-lg font-semibold">Đa nền tảng: Web & App</h3>
-          <p class="mt-2 text-sm text-[rgba(var(--fg),0.65)]">Landing page, website doanh nghiệp đến mobile app mượt mà.</p>
+          <p class="mt-2 text-sm leading-relaxed text-[rgba(var(--fg),0.60)]">Landing page, website doanh nghiệp đến mobile app mượt mà.</p>
         </div>
-        <div class="reveal rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
-          <div class="text-2xl">🛡️</div>
+        <div class="reveal card-hover rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
+          <div class="grid h-12 w-12 place-items-center rounded-2xl bg-[rgba(var(--accent),0.10)] text-2xl">🛡️</div>
           <h3 class="mt-4 text-lg font-semibold">Cam kết hỗ trợ lâu dài</h3>
-          <p class="mt-2 text-sm text-[rgba(var(--fg),0.65)]">Bảo hành/bảo trì rõ ràng, hỗ trợ trong suốt quá trình vận hành.</p>
+          <p class="mt-2 text-sm leading-relaxed text-[rgba(var(--fg),0.60)]">Bảo hành/bảo trì rõ ràng, hỗ trợ trong suốt quá trình vận hành.</p>
         </div>
       </div>
     </div>
@@ -194,46 +226,47 @@
   <section id="services" class="border-y border-[rgba(var(--border),0.12)] bg-[rgb(var(--card-2))] py-16 md:py-20">
     <div class="mx-auto max-w-7xl px-4 md:px-6">
       <div class="reveal max-w-2xl">
-        <div class="inline-flex rounded-full bg-[rgba(var(--border),0.06)] px-3 py-1.5 text-xs text-[rgba(var(--fg),0.70)] ring-1 ring-[rgba(var(--border),0.10)]">Dịch vụ</div>
+        <div class="inline-flex rounded-full bg-[rgba(var(--accent),0.10)] px-3 py-1.5 text-xs font-medium text-[rgb(var(--accent))] ring-1 ring-[rgba(var(--accent),0.20)]">Dịch vụ</div>
         <h2 class="mt-4 text-3xl font-bold tracking-tight md:text-4xl">Giải pháp công nghệ toàn diện</h2>
+        <div class="section-accent-line mt-3"></div>
       </div>
 
-      <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
-        <div class="reveal rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
+      <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3 stagger">
+        <div class="reveal card-hover rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
           <div class="flex items-center gap-3">
-            <div class="grid h-10 w-10 place-items-center rounded-2xl bg-[rgba(var(--border),0.06)] ring-1 ring-[rgba(var(--border),0.10)]">🌐</div>
+            <div class="grid h-11 w-11 place-items-center rounded-2xl bg-[rgba(var(--accent),0.10)] text-lg">🌐</div>
             <h3 class="text-lg font-semibold">Thiết kế Website</h3>
           </div>
-          <ul class="mt-5 space-y-2 text-sm text-[rgba(var(--fg),0.65)]">
-            <li>• Website Doanh nghiệp (Corporate)</li>
-            <li>• Landing Page bán hàng (High convert)</li>
-            <li>• Trang thương mại điện tử (E-commerce)</li>
-            <li>• Website theo yêu cầu (Custom)</li>
-            <li>• Đồ án, bài tập lớn cho sinh viên</li>
+          <ul class="mt-5 space-y-2.5 text-sm text-[rgba(var(--fg),0.60)]">
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-[rgb(var(--accent))]"></span> Website Doanh nghiệp (Corporate)</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-[rgb(var(--accent))]"></span> Landing Page bán hàng (High convert)</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-[rgb(var(--accent))]"></span> Trang thương mại điện tử (E-commerce)</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-[rgb(var(--accent))]"></span> Website theo yêu cầu (Custom)</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-[rgb(var(--accent))]"></span> Đồ án, bài tập lớn cho sinh viên</li>
           </ul>
         </div>
 
-        <div class="reveal rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
+        <div class="reveal card-hover rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
           <div class="flex items-center gap-3">
-            <div class="grid h-10 w-10 place-items-center rounded-2xl bg-[rgba(var(--border),0.06)] ring-1 ring-[rgba(var(--border),0.10)]">📲</div>
+            <div class="grid h-11 w-11 place-items-center rounded-2xl bg-[rgba(var(--accent),0.10)] text-lg">📲</div>
             <h3 class="text-lg font-semibold">Lập trình Mobile App</h3>
           </div>
-          <ul class="mt-5 space-y-2 text-sm text-[rgba(var(--fg),0.65)]">
-            <li>• App bán hàng/đặt lịch (iOS/Android)</li>
-            <li>• Ứng dụng quản lý nội bộ</li>
-            <li>• Push Notification, Analytics</li>
+          <ul class="mt-5 space-y-2.5 text-sm text-[rgba(var(--fg),0.60)]">
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-[rgb(var(--accent))]"></span> App bán hàng/đặt lịch (iOS/Android)</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-[rgb(var(--accent))]"></span> Ứng dụng quản lý nội bộ</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-[rgb(var(--accent))]"></span> Push Notification, Analytics</li>
           </ul>
         </div>
 
-        <div class="reveal rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
+        <div class="reveal card-hover rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
           <div class="flex items-center gap-3">
-            <div class="grid h-10 w-10 place-items-center rounded-2xl bg-[rgba(var(--border),0.06)] ring-1 ring-[rgba(var(--border),0.10)]">🤖</div>
+            <div class="grid h-11 w-11 place-items-center rounded-2xl bg-[rgba(var(--accent),0.10)] text-lg">🤖</div>
             <h3 class="text-lg font-semibold">AI & Automation</h3>
           </div>
-          <ul class="mt-5 space-y-2 text-sm text-[rgba(var(--fg),0.65)]">
-            <li>• Chatbot tư vấn tự động 24/7</li>
-            <li>• Tích hợp ChatGPT / OpenAI</li>
-            <li>• Tự động hoá quy trình (RPA)</li>
+          <ul class="mt-5 space-y-2.5 text-sm text-[rgba(var(--fg),0.60)]">
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-[rgb(var(--accent))]"></span> Chatbot tư vấn tự động 24/7</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-[rgb(var(--accent))]"></span> Tích hợp ChatGPT / OpenAI</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-[rgb(var(--accent))]"></span> Tự động hoá quy trình (RPA)</li>
           </ul>
         </div>
       </div>
@@ -244,54 +277,55 @@
   <section id="projects" class="py-16 md:py-20">
     <div class="mx-auto max-w-7xl px-4 md:px-6">
       <div class="reveal max-w-2xl">
-        <div class="inline-flex rounded-full bg-[rgba(var(--border),0.06)] px-3 py-1.5 text-xs text-[rgba(var(--fg),0.70)] ring-1 ring-[rgba(var(--border),0.10)]">Portfolio</div>
+        <div class="inline-flex rounded-full bg-[rgba(var(--accent),0.10)] px-3 py-1.5 text-xs font-medium text-[rgb(var(--accent))] ring-1 ring-[rgba(var(--accent),0.20)]">Portfolio</div>
         <h2 class="mt-4 text-3xl font-bold tracking-tight md:text-4xl">Các Dự Án</h2>
-        <p class="mt-3 text-[rgba(var(--fg),0.65)]">Một số dự án tiêu biểu thể hiện tư duy giải pháp và năng lực kỹ thuật.</p>
+        <div class="section-accent-line mt-3"></div>
+        <p class="mt-4 text-[rgba(var(--fg),0.60)]">Một số dự án tiêu biểu thể hiện tư duy giải pháp và năng lực kỹ thuật.</p>
       </div>
 
-      <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 stagger">
         <!-- card -->
-        <div class="reveal group overflow-hidden rounded-3xl bg-[rgb(var(--card))] ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
-          <div class="relative grid h-40 place-items-center bg-[rgba(var(--border),0.04)]">
-            <div class="text-3xl">🛒</div>
-            <div class="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100 bg-gradient-to-t from-[rgba(var(--border),0.30)] to-transparent"></div>
+        <div class="reveal group card-hover overflow-hidden rounded-3xl bg-[rgb(var(--card))] ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
+          <div class="relative grid h-40 place-items-center bg-gradient-to-br from-[rgba(var(--accent),0.08)] to-[rgba(var(--border),0.04)]">
+            <div class="text-4xl transition-transform duration-300 group-hover:scale-110">🛒</div>
+            <div class="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100 bg-gradient-to-t from-[rgba(var(--accent),0.15)] to-transparent"></div>
           </div>
           <div class="p-5">
             <div class="text-sm font-semibold">Dự án E-Commerce</div>
-            <p class="mt-2 text-sm text-[rgba(var(--fg),0.65)]">Giỏ hàng, thanh toán, quản lý đơn hàng – tối ưu tốc độ.</p>
+            <p class="mt-2 text-sm leading-relaxed text-[rgba(var(--fg),0.55)]">Giỏ hàng, thanh toán, quản lý đơn hàng – tối ưu tốc độ.</p>
           </div>
         </div>
 
-        <div class="reveal group overflow-hidden rounded-3xl bg-[rgb(var(--card))] ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
-          <div class="relative grid h-40 place-items-center bg-[rgba(var(--border),0.04)]">
-            <div class="text-3xl">🤖</div>
-            <div class="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100 bg-gradient-to-t from-[rgba(var(--border),0.30)] to-transparent"></div>
+        <div class="reveal group card-hover overflow-hidden rounded-3xl bg-[rgb(var(--card))] ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
+          <div class="relative grid h-40 place-items-center bg-gradient-to-br from-[rgba(var(--accent),0.08)] to-[rgba(var(--border),0.04)]">
+            <div class="text-4xl transition-transform duration-300 group-hover:scale-110">🤖</div>
+            <div class="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100 bg-gradient-to-t from-[rgba(var(--accent),0.15)] to-transparent"></div>
           </div>
           <div class="p-5">
             <div class="text-sm font-semibold">AI Chatbot Platform</div>
-            <p class="mt-2 text-sm text-[rgba(var(--fg),0.65)]">Chatbot tư vấn tự động, hỗ trợ doanh nghiệp 24/7.</p>
+            <p class="mt-2 text-sm leading-relaxed text-[rgba(var(--fg),0.55)]">Chatbot tư vấn tự động, hỗ trợ doanh nghiệp 24/7.</p>
           </div>
         </div>
 
-        <div class="reveal group overflow-hidden rounded-3xl bg-[rgb(var(--card))] ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
-          <div class="relative grid h-40 place-items-center bg-[rgba(var(--border),0.04)]">
-            <div class="text-3xl">📱</div>
-            <div class="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100 bg-gradient-to-t from-[rgba(var(--border),0.30)] to-transparent"></div>
+        <div class="reveal group card-hover overflow-hidden rounded-3xl bg-[rgb(var(--card))] ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
+          <div class="relative grid h-40 place-items-center bg-gradient-to-br from-[rgba(var(--accent),0.08)] to-[rgba(var(--border),0.04)]">
+            <div class="text-4xl transition-transform duration-300 group-hover:scale-110">📱</div>
+            <div class="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100 bg-gradient-to-t from-[rgba(var(--accent),0.15)] to-transparent"></div>
           </div>
           <div class="p-5">
             <div class="text-sm font-semibold">App Đặt lịch</div>
-            <p class="mt-2 text-sm text-[rgba(var(--fg),0.65)]">Đặt lịch thông minh, push notification, tối ưu UX.</p>
+            <p class="mt-2 text-sm leading-relaxed text-[rgba(var(--fg),0.55)]">Đặt lịch thông minh, push notification, tối ưu UX.</p>
           </div>
         </div>
 
-        <div class="reveal group overflow-hidden rounded-3xl bg-[rgb(var(--card))] ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
-          <div class="relative grid h-40 place-items-center bg-[rgba(var(--border),0.04)]">
-            <div class="text-3xl">🏢</div>
-            <div class="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100 bg-gradient-to-t from-[rgba(var(--border),0.30)] to-transparent"></div>
+        <div class="reveal group card-hover overflow-hidden rounded-3xl bg-[rgb(var(--card))] ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
+          <div class="relative grid h-40 place-items-center bg-gradient-to-br from-[rgba(var(--accent),0.08)] to-[rgba(var(--border),0.04)]">
+            <div class="text-4xl transition-transform duration-300 group-hover:scale-110">🏢</div>
+            <div class="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100 bg-gradient-to-t from-[rgba(var(--accent),0.15)] to-transparent"></div>
           </div>
           <div class="p-5">
             <div class="text-sm font-semibold">Website Doanh nghiệp</div>
-            <p class="mt-2 text-sm text-[rgba(var(--fg),0.65)]">Chuẩn SEO, nhanh, responsive, dễ nâng cấp.</p>
+            <p class="mt-2 text-sm leading-relaxed text-[rgba(var(--fg),0.55)]">Chuẩn SEO, nhanh, responsive, dễ nâng cấp.</p>
           </div>
         </div>
       </div>
@@ -302,28 +336,29 @@
   <section id="timeline" class="border-y border-[rgba(var(--border),0.12)] bg-[rgb(var(--card-2))] py-16 md:py-20">
     <div class="mx-auto max-w-7xl px-4 md:px-6">
       <div class="reveal max-w-2xl">
-        <div class="inline-flex rounded-full bg-[rgba(var(--border),0.06)] px-3 py-1.5 text-xs text-[rgba(var(--fg),0.70)] ring-1 ring-[rgba(var(--border),0.10)]">Hành trình</div>
+        <div class="inline-flex rounded-full bg-[rgba(var(--accent),0.10)] px-3 py-1.5 text-xs font-medium text-[rgb(var(--accent))] ring-1 ring-[rgba(var(--accent),0.20)]">Hành trình</div>
         <h2 class="mt-4 text-3xl font-bold tracking-tight md:text-4xl">Con đường phát triển</h2>
-        <p class="mt-3 text-[rgba(var(--fg),0.65)]">Mỗi bước đi đều là bài học, mỗi dự án đều là trải nghiệm quý giá.</p>
+        <div class="section-accent-line mt-3"></div>
+        <p class="mt-4 text-[rgba(var(--fg),0.60)]">Mỗi bước đi đều là bài học, mỗi dự án đều là trải nghiệm quý giá.</p>
       </div>
 
-      <div class="mt-10 grid gap-4">
-        <div class="reveal rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
-          <div class="text-xs text-[rgba(var(--fg),0.55)]">Khởi đầu</div>
-          <h3 class="mt-1 text-lg font-semibold">Đam mê dẫn lối</h3>
-          <p class="mt-2 text-sm text-[rgba(var(--fg),0.65)]">Tự học lập trình, xây dựng các dự án đầu tiên với sự nhiệt huyết.</p>
+      <div class="mt-10 grid gap-4 md:grid-cols-3 stagger">
+        <div class="reveal card-hover rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
+          <div class="inline-flex items-center gap-2 rounded-full bg-[rgba(var(--accent),0.10)] px-3 py-1 text-xs font-medium text-[rgb(var(--accent))]">01</div>
+          <h3 class="mt-3 text-lg font-semibold">Đam mê dẫn lối</h3>
+          <p class="mt-2 text-sm leading-relaxed text-[rgba(var(--fg),0.60)]">Tự học lập trình, xây dựng các dự án đầu tiên với sự nhiệt huyết.</p>
         </div>
 
-        <div class="reveal rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
-          <div class="text-xs text-[rgba(var(--fg),0.55)]">Thử thách</div>
-          <h3 class="mt-1 text-lg font-semibold">Vượt qua khó khăn</h3>
-          <p class="mt-2 text-sm text-[rgba(var(--fg),0.65)]">Học từ sai lầm, rèn kỹ năng và tư duy giải quyết vấn đề hệ thống.</p>
+        <div class="reveal card-hover rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
+          <div class="inline-flex items-center gap-2 rounded-full bg-[rgba(var(--accent),0.10)] px-3 py-1 text-xs font-medium text-[rgb(var(--accent))]">02</div>
+          <h3 class="mt-3 text-lg font-semibold">Vượt qua khó khăn</h3>
+          <p class="mt-2 text-sm leading-relaxed text-[rgba(var(--fg),0.60)]">Học từ sai lầm, rèn kỹ năng và tư duy giải quyết vấn đề hệ thống.</p>
         </div>
 
-        <div class="reveal rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
-          <div class="text-xs text-[rgba(var(--fg),0.55)]">Hiện tại</div>
-          <h3 class="mt-1 text-lg font-semibold">Phục vụ khách hàng</h3>
-          <p class="mt-2 text-sm text-[rgba(var(--fg),0.65)]">Không chỉ code — mà đồng hành hiện thực hoá ý tưởng và vận hành.</p>
+        <div class="reveal card-hover rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
+          <div class="inline-flex items-center gap-2 rounded-full bg-[rgba(var(--accent),0.10)] px-3 py-1 text-xs font-medium text-[rgb(var(--accent))]">03</div>
+          <h3 class="mt-3 text-lg font-semibold">Phục vụ khách hàng</h3>
+          <p class="mt-2 text-sm leading-relaxed text-[rgba(var(--fg),0.60)]">Không chỉ code — mà đồng hành hiện thực hoá ý tưởng và vận hành.</p>
         </div>
       </div>
     </div>
@@ -333,31 +368,47 @@
   <section id="testimonials" class="py-16 md:py-20">
     <div class="mx-auto max-w-7xl px-4 md:px-6">
       <div class="reveal max-w-2xl">
-        <div class="inline-flex rounded-full bg-[rgba(var(--border),0.06)] px-3 py-1.5 text-xs text-[rgba(var(--fg),0.70)] ring-1 ring-[rgba(var(--border),0.10)]">Đánh giá</div>
+        <div class="inline-flex rounded-full bg-[rgba(var(--accent),0.10)] px-3 py-1.5 text-xs font-medium text-[rgb(var(--accent))] ring-1 ring-[rgba(var(--accent),0.20)]">Đánh giá</div>
         <h2 class="mt-4 text-3xl font-bold tracking-tight md:text-4xl">Chuyện người thật, việc thật</h2>
-        <p class="mt-3 text-[rgba(var(--fg),0.65)]">Niềm tin được xây dựng từ kết quả thực tế.</p>
+        <div class="section-accent-line mt-3"></div>
+        <p class="mt-4 text-[rgba(var(--fg),0.60)]">Niềm tin được xây dựng từ kết quả thực tế.</p>
       </div>
 
-      <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
-        <div class="reveal rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
-          <div class="text-sm">★★★★★</div>
-          <p class="mt-3 text-sm text-[rgba(var(--fg),0.65)]">"Support rất có tâm, xử lý nhanh và rõ ràng. Rất đáng tin!"</p>
-          <div class="mt-5 text-sm font-semibold">Anh Minh</div>
-          <div class="text-xs text-[rgba(var(--fg),0.55)]">CEO, Startup Tech</div>
+      <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3 stagger">
+        <div class="reveal card-hover rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
+          <div class="stars text-sm">★★★★★</div>
+          <p class="mt-3 text-sm leading-relaxed text-[rgba(var(--fg),0.60)]">"Support rất có tâm, xử lý nhanh và rõ ràng. Rất đáng tin!"</p>
+          <div class="mt-5 flex items-center gap-3">
+            <div class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-emerald-400 to-cyan-400 text-xs font-bold text-white">M</div>
+            <div>
+              <div class="text-sm font-semibold">Anh Minh</div>
+              <div class="text-xs text-[rgba(var(--fg),0.50)]">CEO, Startup Tech</div>
+            </div>
+          </div>
         </div>
 
-        <div class="reveal rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
-          <div class="text-sm">★★★★★</div>
-          <p class="mt-3 text-sm text-[rgba(var(--fg),0.65)]">"Chi phí hợp lý, code kỹ, làm việc minh bạch. Rất ổn."</p>
-          <div class="mt-5 text-sm font-semibold">Huy Hoàng</div>
-          <div class="text-xs text-[rgba(var(--fg),0.55)]">Project Manager</div>
+        <div class="reveal card-hover rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
+          <div class="stars text-sm">★★★★★</div>
+          <p class="mt-3 text-sm leading-relaxed text-[rgba(var(--fg),0.60)]">"Chi phí hợp lý, code kỹ, làm việc minh bạch. Rất ổn."</p>
+          <div class="mt-5 flex items-center gap-3">
+            <div class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-emerald-400 to-cyan-400 text-xs font-bold text-white">H</div>
+            <div>
+              <div class="text-sm font-semibold">Huy Hoàng</div>
+              <div class="text-xs text-[rgba(var(--fg),0.50)]">Project Manager</div>
+            </div>
+          </div>
         </div>
 
-        <div class="reveal rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
-          <div class="text-sm">★★★★★</div>
-          <p class="mt-3 text-sm text-[rgba(var(--fg),0.65)]">"Web nhanh, chuẩn SEO, UI đẹp và responsive rất tốt."</p>
-          <div class="mt-5 text-sm font-semibold">Chị Lan</div>
-          <div class="text-xs text-[rgba(var(--fg),0.55)]">Founder, Thời trang</div>
+        <div class="reveal card-hover rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
+          <div class="stars text-sm">★★★★★</div>
+          <p class="mt-3 text-sm leading-relaxed text-[rgba(var(--fg),0.60)]">"Web nhanh, chuẩn SEO, UI đẹp và responsive rất tốt."</p>
+          <div class="mt-5 flex items-center gap-3">
+            <div class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-emerald-400 to-cyan-400 text-xs font-bold text-white">L</div>
+            <div>
+              <div class="text-sm font-semibold">Chị Lan</div>
+              <div class="text-xs text-[rgba(var(--fg),0.50)]">Founder, Thời trang</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -367,49 +418,59 @@
   <section id="contact" class="border-t border-[rgba(var(--border),0.12)] bg-[rgb(var(--card-2))] py-16 md:py-20">
     <div class="mx-auto max-w-7xl px-4 md:px-6">
       <div class="reveal max-w-2xl">
-        <div class="inline-flex rounded-full bg-[rgba(var(--border),0.06)] px-3 py-1.5 text-xs text-[rgba(var(--fg),0.70)] ring-1 ring-[rgba(var(--border),0.10)]">Liên hệ</div>
+        <div class="inline-flex rounded-full bg-[rgba(var(--accent),0.10)] px-3 py-1.5 text-xs font-medium text-[rgb(var(--accent))] ring-1 ring-[rgba(var(--accent),0.20)]">Liên hệ</div>
         <h2 class="mt-4 text-3xl font-bold tracking-tight md:text-4xl">Nhận tư vấn nhanh cho dự án của bạn</h2>
-        <p class="mt-3 text-[rgba(var(--fg),0.65)]">Để lại thông tin, chúng tôi sẽ liên hệ tư vấn giải pháp tối ưu.</p>
+        <div class="section-accent-line mt-3"></div>
+        <p class="mt-4 text-[rgba(var(--fg),0.60)]">Để lại thông tin, chúng tôi sẽ liên hệ tư vấn giải pháp tối ưu.</p>
       </div>
 
       <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-12">
-        <form class="reveal rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.12)] shadow-sm md:col-span-7">
+        <form class="reveal rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.10)] shadow-sm md:col-span-7">
           <div class="grid gap-4">
             <div>
-              <label class="text-sm text-[rgba(var(--fg),0.75)]">Họ và tên</label>
-              <input required class="mt-2 w-full rounded-2xl bg-[rgba(var(--border),0.04)] px-4 py-3 text-sm ring-1 ring-[rgba(var(--border),0.12)] outline-none focus:ring-2 focus:ring-[rgba(var(--border),0.25)]" placeholder="Nhập họ và tên">
+              <label class="text-sm font-medium text-[rgba(var(--fg),0.85)]">Họ và tên</label>
+              <input required class="mt-2 w-full rounded-2xl bg-[rgba(var(--border),0.08)] px-4 py-3 text-sm text-[rgb(var(--fg))] placeholder:text-[rgba(var(--fg),0.40)] ring-1 ring-[rgba(var(--border),0.18)] outline-none transition-all focus:ring-2 focus:ring-[rgba(var(--accent),0.4)]" placeholder="Nhập họ và tên">
             </div>
 
             <div>
-              <label class="text-sm text-[rgba(var(--fg),0.75)]">Số điện thoại / Zalo</label>
-              <input required class="mt-2 w-full rounded-2xl bg-[rgba(var(--border),0.04)] px-4 py-3 text-sm ring-1 ring-[rgba(var(--border),0.12)] outline-none focus:ring-2 focus:ring-[rgba(var(--border),0.25)]" placeholder="Nhập số điện thoại">
+              <label class="text-sm font-medium text-[rgba(var(--fg),0.85)]">Số điện thoại / Zalo</label>
+              <input required class="mt-2 w-full rounded-2xl bg-[rgba(var(--border),0.08)] px-4 py-3 text-sm text-[rgb(var(--fg))] placeholder:text-[rgba(var(--fg),0.40)] ring-1 ring-[rgba(var(--border),0.18)] outline-none transition-all focus:ring-2 focus:ring-[rgba(var(--accent),0.4)]" placeholder="Nhập số điện thoại">
             </div>
 
             <div>
-              <label class="text-sm text-[rgba(var(--fg),0.75)]">Nhu cầu</label>
-              <select required class="mt-2 w-full rounded-2xl bg-[rgba(var(--border),0.04)] px-4 py-3 text-sm ring-1 ring-[rgba(var(--border),0.12)] outline-none focus:ring-2 focus:ring-[rgba(var(--border),0.25)]">
-                <option value="" disabled selected>Chọn nhu cầu</option>
-                <option value="website">Thiết kế Website</option>
-                <option value="app">Lập trình Mobile App</option>
-                <option value="ai">AI & Automation</option>
-                <option value="other">Khác</option>
+              <label class="text-sm font-medium text-[rgba(var(--fg),0.85)]">Nhu cầu</label>
+              <select required class="mt-2 w-full rounded-2xl bg-[rgb(var(--card))] px-4 py-3 text-sm text-[rgb(var(--fg))] ring-1 ring-[rgba(var(--border),0.18)] outline-none transition-all focus:ring-2 focus:ring-[rgba(var(--accent),0.4)]">
+                <option value="" disabled selected class="bg-[rgb(var(--card))] text-[rgb(var(--fg))]">Chọn nhu cầu</option>
+                <option value="website" class="bg-[rgb(var(--card))] text-[rgb(var(--fg))]">Thiết kế Website</option>
+                <option value="app" class="bg-[rgb(var(--card))] text-[rgb(var(--fg))]">Lập trình Mobile App</option>
+                <option value="ai" class="bg-[rgb(var(--card))] text-[rgb(var(--fg))]">AI & Automation</option>
+                <option value="other" class="bg-[rgb(var(--card))] text-[rgb(var(--fg))]">Khác</option>
               </select>
             </div>
 
             <button type="submit"
-              class="inline-flex items-center justify-center rounded-2xl bg-[rgb(var(--fg))] px-5 py-3 text-sm font-semibold text-[rgb(var(--bg))] hover:opacity-90">
+              class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-emerald-500 to-cyan-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-[1.01] transition-all duration-300">
               Nhận tư vấn ngay
             </button>
           </div>
         </form>
 
         <div class="reveal md:col-span-5">
-          <div class="rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.12)] shadow-sm">
+          <div class="rounded-3xl bg-[rgb(var(--card))] p-6 ring-1 ring-[rgba(var(--border),0.10)] shadow-sm">
             <h3 class="text-lg font-semibold">Liên hệ trực tiếp</h3>
-            <div class="mt-5 space-y-3 text-sm text-[rgba(var(--fg),0.70)]">
-              <div>📞 0388 402 378</div>
-              <div>✉️ nvdtuan205111@gmail.com</div>
-              <div>📘 fb.com/nguyenvdtuan</div>
+            <div class="mt-5 space-y-4 text-sm text-[rgba(var(--fg),0.65)]">
+              <div class="flex items-center gap-3">
+                <div class="grid h-9 w-9 place-items-center rounded-xl bg-[rgba(var(--accent),0.10)] text-sm">📞</div>
+                <span>0388 402 378</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="grid h-9 w-9 place-items-center rounded-xl bg-[rgba(var(--accent),0.10)] text-sm">✉️</div>
+                <span>nvdtuan205111@gmail.com</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="grid h-9 w-9 place-items-center rounded-xl bg-[rgba(var(--accent),0.10)] text-sm">📘</div>
+                <span>fb.com/nguyenvdtuan</span>
+              </div>
             </div>
           </div>
         </div>
@@ -417,17 +478,15 @@
     </div>
   </section>
 
-  <footer class="py-10">
+  <footer class="border-t border-[rgba(var(--border),0.08)] py-10">
     <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 md:flex-row md:items-center md:justify-between md:px-6">
-      <div class="text-sm text-[rgba(var(--fg),0.70)]">
-        <span class="font-semibold text-[rgb(var(--fg))]">WebCraft</span> — © 2025. All rights reserved.
-      </div>
-      <div class="text-sm text-[rgba(var(--fg),0.70)]">
-        Built with Tailwind.
+      <div class="flex items-center gap-2 text-sm text-[rgba(var(--fg),0.65)]">
+        <span class="grid h-7 w-7 place-items-center rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 text-xs font-black text-white">W</span>
+        <span><span class="font-semibold text-[rgb(var(--fg))]">WebCraft</span> — © 2026. All rights reserved.</span>
       </div>
     </div>
   </footer>
 
-  <script src="./script.js"></script>
+  <script defer src="./script.js"></script>
 </body>
 </html>
